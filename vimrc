@@ -32,5 +32,6 @@ Bundle 'vim-scripts/easytags.vim'
 Bundle 'vim-scripts/delimitMate.vim'
 Bundle 'wincent/Command-T'
 Bundle 'ervandew/supertab'
+Bundle 'vim-scripts/taglist.vim'
 
 
