@@ -10,6 +10,9 @@ filetype plugin indent on
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 set laststatus=2
+let g:notes_directory = '~/Dropbox/vimnotes'
+let g:SuperTabDefaultCompletionType = "context"
+let g:easytags_include_members = 1
 
 
 Bundle 'gmarik/vundle'
@@ -32,6 +35,7 @@ Bundle 'vim-scripts/easytags.vim'
 Bundle 'vim-scripts/delimitMate.vim'
 Bundle 'wincent/Command-T'
 Bundle 'ervandew/supertab'
+Bundle 'xolox/vim-notes'
 Bundle 'vim-scripts/taglist.vim'
 
 
