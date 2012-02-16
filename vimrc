@@ -14,6 +14,11 @@ let g:notes_directory = '~/Dropbox/vimnotes'
 let g:SuperTabDefaultCompletionType = "context"
 let g:easytags_include_members = 1
 
+let os = substitute(system('uname'), "\n", "", "")
+if os == "Darwin"
+	let g:Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+endif
+
 
 Bundle 'gmarik/vundle'
 
@@ -23,7 +28,7 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree'
 " Bundle 'astashov/vim-ruby-debugger'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/IndexedSearch'
+"Bundle 'vim-scripts/IndexedSearch'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-surround'
