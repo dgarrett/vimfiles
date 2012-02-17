@@ -42,5 +42,6 @@ Bundle 'wincent/Command-T'
 Bundle 'ervandew/supertab'
 Bundle 'xolox/vim-notes'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/a.vim'
 
 
