@@ -13,10 +13,16 @@ set laststatus=2
 let g:notes_directory = '~/Dropbox/vimnotes'
 let g:SuperTabDefaultCompletionType = "context"
 let g:easytags_include_members = 1
+set tags=~/.vimtags
+
 
 let os = substitute(system('uname'), "\n", "", "")
 if os == "Darwin"
 	let g:Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+endif
+
+if has("mouse")
+	set mouse=a
 endif
 
 
