@@ -23,7 +23,10 @@ endif
 
 if has("mouse")
 	set mouse=a
+	noremap <MiddleMouse> <LeftMouse>
 endif
+
+set wildignore+=*.o,*.obj,.git,tmp
 
 
 Bundle 'gmarik/vundle'
