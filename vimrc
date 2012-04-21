@@ -24,9 +24,12 @@ endif
 
 if has("mouse")
 	set mouse=a
+	noremap <MiddleMouse> <LeftMouse>
 endif
 
 let $GIT_SSL_NO_VERIFY = 'true'
+set wildignore+=*.o,*.obj,.git,tmp
+
 
 Bundle 'gmarik/vundle'
 
