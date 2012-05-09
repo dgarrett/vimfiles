@@ -59,5 +59,7 @@ Bundle 'sickill/vim-pasta'
 Bundle 'Lokaltog/vim-powerline'
 " Bundle 'instant-markdown'
 Bundle 'matchit.zip'
+Bundle 'ap/vim-css-color'
+Bundle 'colorizer'
 
 
