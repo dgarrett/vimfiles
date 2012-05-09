@@ -25,6 +25,8 @@ if has("mouse")
 	set mouse=a
 endif
 
+let g:Powerline_symbols = 'fancy'
+
 
 Bundle 'gmarik/vundle'
 
@@ -41,7 +43,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-commentary'
 Bundle 'vim-scripts/ruby-matchit'
-Bundle 'vim-scripts/SmartusLine'
+" Bundle 'vim-scripts/SmartusLine'
 Bundle 'vim-scripts/easytags.vim'
 Bundle 'vim-scripts/delimitMate.vim'
 Bundle 'wincent/Command-T'
@@ -50,5 +52,8 @@ Bundle 'xolox/vim-notes'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/a.vim'
 Bundle 'sickill/vim-pasta'
+Bundle 'Lokaltog/vim-powerline'
+" Bundle 'instant-markdown'
+Bundle 'matchit.zip'
 
 
