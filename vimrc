@@ -14,6 +14,7 @@ let g:notes_directory = '~/Dropbox/vimnotes'
 let g:SuperTabDefaultCompletionType = "context"
 let g:easytags_include_members = 1
 set tags=~/.vimtags
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 
 let os = substitute(system('uname'), "\n", "", "")
@@ -23,9 +24,12 @@ endif
 
 if has("mouse")
 	set mouse=a
+	noremap <MiddleMouse> <LeftMouse>
 endif
 
 let g:Powerline_symbols = 'fancy'
+let $GIT_SSL_NO_VERIFY = 'true'
+set wildignore+=*.o,*.obj,.git,tmp
 
 
 Bundle 'gmarik/vundle'
