@@ -7,14 +7,32 @@ color molokai
 set nocompatible
 filetype off
 filetype plugin indent on
-set rtp+=~/.vim/bundle/vundle/
+set encoding=utf-8
+if has("win32")
+	set rtp+=%USERPROFILE%/vimfiles/bundle/vundle
+"	set guifont=Inconsolata_for_Powerline:h12:cANSI
+	set guifont=Consolas_for_Powerline_FixedD:h10.5
+	set columns=140
+	set lines=35
+	set autoread
+
+else
+	set rtp+=~/.vim/bundle/vundle/
+endif
+
 call vundle#rc()
 set laststatus=2
-let g:notes_directory = '~/Dropbox/vimnotes'
+"let g:notes_directory = '~/Dropbox/vimnotes'
 let g:SuperTabDefaultCompletionType = "context"
 let g:easytags_include_members = 1
 set tags=~/.vimtags
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+
+set expandtab
+set tabstop=4
+set backspace=indent,eol,start
+set number
+
 
 
 let os = substitute(system('uname'), "\n", "", "")
@@ -48,12 +66,12 @@ Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-commentary'
 Bundle 'vim-scripts/ruby-matchit'
 " Bundle 'vim-scripts/SmartusLine'
-Bundle 'vim-scripts/easytags.vim'
+"Bundle 'vim-scripts/easytags.vim'
 Bundle 'vim-scripts/delimitMate.vim'
 Bundle 'wincent/Command-T'
 Bundle 'ervandew/supertab'
 Bundle 'xolox/vim-notes'
-Bundle 'vim-scripts/taglist.vim'
+"Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/a.vim'
 Bundle 'sickill/vim-pasta'
 Bundle 'Lokaltog/vim-powerline'
