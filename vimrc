@@ -1,3 +1,4 @@
+set shell=/bin/bash
 "call pathogen#infect()
 syntax on
 "filetype plugin indent on
@@ -11,6 +12,7 @@ if !has('gui_running')
     "let g:solarized_termcolors=256
 endif
 colorscheme solarized
+set guifont=Sauce_Code_Powerline:h14
 
 "let mapleader = ","
 set nocompatible
@@ -27,6 +29,11 @@ if has("win32")
 
 else
     set rtp+=~/.vim/bundle/vundle/
+endif
+
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
 endif
 
 call vundle#rc()
@@ -46,7 +53,7 @@ set shiftwidth=4
 set tabstop=4
 set smarttab
 set cindent
-let indent_guides_enable_on_vim_startup = 1
+" let indent_guides_enable_on_vim_startup = 1
 
 " Keep cursor away from edges of screen
 set so=5
@@ -74,7 +81,7 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 
-
+let g:airline_powerline_fonts = 1
 
 let os = substitute(system('uname'), "\n", "", "")
 if os == "Darwin"
@@ -86,7 +93,7 @@ if has("mouse")
     noremap <MiddleMouse> <LeftMouse>
 endif
 
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 let $GIT_SSL_NO_VERIFY = 'true'
 set wildignore+=*.o,*.obj,.git,tmp
 
@@ -95,6 +102,14 @@ let g:syntastic_always_populate_loc_list = 1
 
 nnoremap - :Switch<cr>
 
+" use ghc functionality for haskell files
+au Bufenter *.hs compiler ghc
+
+" Configure browser for haskell_doc.vim
+let g:haddock_browser = "open"
+let g:haddock_browser_callformat = "%s %s"
+
+let g:calendar_google_calendar = 1
 
 Bundle 'gmarik/vundle'
 
@@ -135,5 +150,9 @@ Bundle 'PeterRincker/vim-argumentative'
 Bundle 'AndrewRadev/switch.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kien/tabman.vim'
-
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'lukerandall/haskellmode-vim'
+" Bundle 'Twinside/vim-haskellFold'
+" Bundle 'itchyny/calendar.vim'
+Bundle 'edkolev/tmuxline.vim'
 
