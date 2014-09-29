@@ -129,9 +129,11 @@ set cindent
 let indent_guides_enable_on_vim_startup = 1
 
 let g:easytags_async = 1
-let g:easytags_cmd = 'C:\Users\dylang\Documents\bin\ctags.exe'
+if has("win32")
+    let g:easytags_cmd = 'C:\Users\dylang\Documents\bin\ctags.exe'
 
-let g:tagbar_ctags_bin = 'C:\Users\dylang\Documents\bin\ctags.exe'
+    let g:tagbar_ctags_bin = 'C:\Users\dylang\Documents\bin\ctags.exe'
+endif
 
 if has("mouse")
     set mouse=a
