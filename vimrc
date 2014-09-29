@@ -75,7 +75,11 @@ if (has("win32") && !has('gui_running'))
 else
     set background=dark
     colorscheme solarized
-    set guifont=Inconsolata_for_Powerline:h11
+    if has("win32")
+        set guifont=Inconsolata_for_Powerline:h11
+    else
+        set guifont=Inconsolata_for_Powerline:h15
+    endif
     "set guifont=Sauce_Code_Powerline:h10
 endif
 ""
