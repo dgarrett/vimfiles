@@ -32,7 +32,6 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'noahfrederick/vim-noctu'
 " Language
 Plugin 'marijnh/tern_for_vim'
-Plugin 'dag/vim2hs'
 " Other
 "Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'majutsushi/tagbar'
@@ -42,6 +41,7 @@ Plugin 'xolox/vim-shell'
 call vundle#end()
 " Enable file type detection and do language-dependent indenting
 filetype plugin indent on
+set showcmd
 
 set backspace=indent,eol,start
 syntax on
@@ -59,13 +59,29 @@ set guioptions+=b
 
 set autochdir
 
+set encoding=utf-8
+
+set tags+=./tags;
+set regexpengine=1
+let g:easytags_auto_highlight = 1
+
+"" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
 "" KEYMAPS
 " Use j and k for <Esc>
 inoremap jk <Esc>
 inoremap kj <Esc>
+nnoremap <Esc> :noh<Return><Esc>
 
 nmap <F8> :TagbarToggle<CR>
 ""
+
+"" Filetypes
+au BufRead,BufNewFile *.man set filetype=xml
 
 "" VISUAL
 if (has("win32") && !has('gui_running'))
@@ -107,6 +123,11 @@ set tabstop=4
 set smarttab
 set cindent
 let indent_guides_enable_on_vim_startup = 1
+
+let g:easytags_async = 1
+let g:easytags_cmd = 'C:\Users\dylang\Documents\bin\ctags.exe'
+
+let g:tagbar_ctags_bin = 'C:\Users\dylang\Documents\bin\ctags.exe'
 
 if has("mouse")
     set mouse=a
