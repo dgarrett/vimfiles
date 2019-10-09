@@ -37,6 +37,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-shell'
+Plugin 'arcticstudio/nord-vim'
 
 call vundle#end()
 " Enable file type detection and do language-dependent indenting
@@ -92,7 +93,7 @@ if (has("win32") && !has('gui_running'))
     colorscheme default
 else
     set background=dark
-    colorscheme solarized
+    colorscheme nord
     if has("win32")
         set guifont=Inconsolata_for_Powerline:h11
     else
