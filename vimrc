@@ -143,5 +143,7 @@ if has("mouse")
     noremap <MiddleMouse> <LeftMouse>
 endif
 
+" Use system clipboard by default
+set clipboard=unnamedplus
 
 
