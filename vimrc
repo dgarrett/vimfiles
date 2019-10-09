@@ -52,7 +52,9 @@ set number
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
 
-set lines=50 columns=140
+if (has('gui_running'))
+    set lines=50 columns=140
+endif
 
 set nowrap
 set guioptions+=b
@@ -94,7 +96,7 @@ else
     if has("win32")
         set guifont=Inconsolata_for_Powerline:h11
     else
-        set guifont=Inconsolata_for_Powerline:h15
+        set guifont=Fira\ Code\ 11
     endif
     "set guifont=Sauce_Code_Powerline:h10
 endif
