@@ -30,6 +30,7 @@ Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'noahfrederick/vim-noctu'
+Plugin 'arcticicestudio/nord-vim'
 " Language
 Plugin 'marijnh/tern_for_vim'
 " Other
@@ -37,7 +38,6 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-shell'
-Plugin 'arcticstudio/nord-vim'
 
 call vundle#end()
 " Enable file type detection and do language-dependent indenting
