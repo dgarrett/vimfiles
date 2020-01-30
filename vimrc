@@ -8,6 +8,7 @@ else
     set shell=/bin/bash
     set rtp+=~/.vim/bundle/Vundle.vim/
 endif
+let mapleader = "\\"
 set laststatus=2 "for Powerline
 let g:airline_powerline_fonts = 1
 nmap <Leader>rt :TagbarToggle<CR>
@@ -38,6 +39,9 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-shell'
+Plugin 'vimwiki/vimwiki' # personal wiki
+Plugin 'junegunn/goyo.vim' # distraction free
+Plugin 'mhinz/vim-signify' # VCS gutter
 
 call vundle#end()
 " Enable file type detection and do language-dependent indenting
@@ -97,9 +101,8 @@ else
     if has("win32")
         set guifont=Inconsolata_for_Powerline:h11
     else
-        set guifont=Fira\ Code\ 11
+        set guifont=Fira\ Code\ 13
     endif
-    "set guifont=Sauce_Code_Powerline:h10
 endif
 ""
 
