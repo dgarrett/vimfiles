@@ -39,9 +39,9 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-shell'
-Plugin 'vimwiki/vimwiki' # personal wiki
-Plugin 'junegunn/goyo.vim' # distraction free
-Plugin 'mhinz/vim-signify' # VCS gutter
+Plugin 'vimwiki/vimwiki' " personal wiki
+Plugin 'junegunn/goyo.vim' " distraction free
+Plugin 'mhinz/vim-signify' " VCS gutter
 
 call vundle#end()
 " Enable file type detection and do language-dependent indenting
