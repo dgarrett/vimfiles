@@ -51,8 +51,9 @@ set showcmd
 set backspace=indent,eol,start
 syntax on
 
-" Show line numbers
+" Show line numbers, relative to current line
 set number
+set relativenumber
 
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
