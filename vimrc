@@ -146,4 +146,7 @@ endif
 " Use system clipboard by default
 set clipboard=unnamedplus
 
+" Fix bug with automatically pasting when opening vim
+" https://vi.stackexchange.com/questions/13971/vim-pasting-yank-register-when-opening-a-new-file
+set t_RS=
 
