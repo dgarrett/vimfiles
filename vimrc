@@ -81,9 +81,11 @@ set smartcase
 
 "" KEYMAPS
 " Use j and k for <Esc>
-inoremap jk <Esc>
-inoremap kj <Esc>
-nnoremap <Esc> :noh<Return><Esc>
+" Note: These seem to behave badly on the Kitty terminal emulator
+" https://github.com/zeit/hyper/issues/2819
+"inoremap jk <Esc>
+"inoremap kj <Esc>
+"nnoremap <Esc> :noh<Return><Esc>
 
 nmap <F8> :TagbarToggle<CR>
 ""
@@ -149,8 +151,4 @@ endif
 
 " Use system clipboard by default
 set clipboard=unnamedplus
-
-" Fix bug with automatically pasting when opening vim
-" https://vi.stackexchange.com/questions/13971/vim-pasting-yank-register-when-opening-a-new-file
-set t_RS=
 
