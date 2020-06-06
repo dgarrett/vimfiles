@@ -34,6 +34,7 @@ Plugin 'noahfrederick/vim-noctu'
 Plugin 'arcticicestudio/nord-vim'
 " Language
 Plugin 'marijnh/tern_for_vim'
+Plugin 'sheerun/vim-polyglot'
 " Other
 "Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'majutsushi/tagbar'
