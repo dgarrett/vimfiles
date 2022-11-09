@@ -23,7 +23,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
 Plugin 'fholgado/minibufexpl.vim'
-Plugin 'xolox/vim-easytags'
 Plugin 'tpope/vim-fugitive'
 " Visual
 Plugin 'bling/vim-airline'
